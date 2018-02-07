@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <title>Hangman</title>
+</head>
+
+<body>
+
+    <div class="st">
+
+        <div class="st-top">
+            <div class="st-bound st-bound-full"></div>
+            <p>
+                <span class="st-drop st-stranger-s">S</span>
+                <span class="st-stranger-t">t</span>
+                <span class="st-stranger-r">r</span>
+                <span class="st-stranger-a">a</span>
+                <span class="st-stranger-n">n</span>
+                <span class="st-stranger-g">g</span>
+                <span class="st-stranger-e">e</span>
+                <span class="st-drop st-stranger-r-2">r</span>
+            </p>
+            <div class="st-bound st-bound-mini st-bound-left"></div>
+            <div class="st-bound st-bound-mini st-bound-right"></div>
+        </div>
+
+        <div class="st-bottom">
+            <p>
+                <span class="st-things-t">T</span>
+                <span class="st-things-h">h</span>
+                <span class="st-things-i">i</span>
+                <span class="st-things-n">n</span>
+                <span class="st-things-g">g</span>
+                <span class="st-things-s">s</span>
+            </p>
+        </div>
+       
+    </div>
+    <div class="container">
+        <div class="container text-center">
+            <h3></h3>
+            <p>
+                <em>This is the Stranger Things hangman experience</em>
+            </p>
+            <p>Press any key to begin!</p>
+            <br>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div>Wins</div>
+                    <p id="wins"></p>
+                    
+                </div>
+                <div class="col-sm-8">
+                    <div id="wordBox"></div>
+
+                </div>
+                <div class="col-sm-2">
+                    <div>Guesses Remaining</div>
+                    <p id="remaining1"></p>
+                    <div id="wrongGuesses">Letters Guessed</div>
+                    <p id="wrongGuess1"></p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <script src="./assets/javascript/game.js"></script>
+</body>
+
+</html>
