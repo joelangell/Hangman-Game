@@ -8,12 +8,19 @@ var display = []
 var wins = 0
 var guesses
 var hideDiv = document.getElementById("wordBox")
-    hideDiv.style.display = "none";
+    hideDiv.style.display = "none"
+var hideWinPic = document.getElementById("winPic")
+    hideWinPic.style.display = "none"
+var hideLosePic = document.getElementById("losePic")
+    hideLosePic.style.display = "none"
+
 
 document.onkeyup = function(event) {
     if (event.key) {
     var showDiv = document.getElementById("wordBox")
     showDiv.style.display = "block"
+    var hideKey = document.getElementById("key")
+    hideKey.style.display = "none"
     start()
     }
 }
@@ -21,7 +28,7 @@ document.onkeyup = function(event) {
 function start() {
 
         var hangWord = words[Math.floor((Math.random() * words.length))]
-        var guesses = 6
+        var guesses = 10
         display = []
         for (i = 0; i < hangWord.length; i++) {
             display.push('_')
@@ -60,12 +67,16 @@ function start() {
                 }
 
                 if (guesses === 0) {
-                    alert("You lose!")
+                    document.getElementById("lose").innerHTML = "Try again!"
+                    var showLosePic = document.getElementById("losePic")
+                        showLosePic.style.display = "inline-block"
                     restart()
                 }
     
                 if (display.indexOf("_") === -1) {
-                    alert("You win!")
+                    document.getElementById("win").innerHTML = "You win!"
+                    var showWinPic = document.getElementById("winPic")
+                        showWinPic.style.display = "inline-block"
                     wins++
                     document.getElementById("wins").innerHTML = wins
                     restart()
